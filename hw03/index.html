@@ -185,49 +185,92 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次作業遇到的問題比較多，首先是我的掃描頁面有一張沒有掃描成功，導致程式在旋轉校正時抓不到QR code而出現錯誤，重新掃描後到後面頁數又出現問題，需要再經過重新掃描才能成功執行花了不少時間。
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
-  <div class="row hw12">
-    <div class="col-md-12 twenty">
-      <table>
-        <tr>
-          <th>總分</th>
-          <th>完成後打勾</th>
-          <th>配分</th>
-          <th>分項描述</th>
-        </tr>
-        <tr>
-          <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
-        </tr>
-      </table>
-    </div>
+ <!-- ------------------------------------------------>
+ <div class="row hw12">
+  <div class="col-md-12 twenty">
+    <table>
+      <tr>
+        <th>總分</th>
+        <th>完成後打勾</th>
+        <th>配分</th>
+        <th>分項描述</th>
+      </tr>
+      <tr>
+        <td rowspan="7" id="myTotal"></td>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+        <td id='m1'>1</td>
+        <td>Simple baseline - 專案下載 </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+        <td id='m2'>2</td>
+        <td>Simple baseline - 安裝虛擬環境 </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+        <td id='m3'>3</td>
+        <td>Medium baseline - 旋轉校正手寫稿紙 </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+        <td id='m4'>4</td>
+        <td>Strong baseline - 成功執行切割程式並取得檔案 </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked></td>
+        <td id='m5'>2</td>
+        <td>Strong baseline - 繳交頁面新增下載壓縮檔按鈕 </td>
+      </tr>
+    </table>
   </div>
+</div>
 
-  <!-- ------------------------------------------------>
-  <div class="row hw12">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
-    </div>
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    Simple baseline
   </div>
+</div>
 
+<div class="row hw12">
+  <div class="col-md-12 twenty">    
+    <img src="./simple/simple.png" width="1200px" height="600px"/>
+  </div>
+</div>
+<div class="row hw12">
+  <div class="col-md-12 twenty">    
+    <img src="./simple/simple2.png" width="1200px" height="600px"/>      
+  </div>
+</div>
+
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    Medium baseline
+  </div>
+</div>
+
+<div class="row hw12">
+  <div class="col-md-12 twenty">    
+    <a href="https://drive.google.com/file/d/1dtk3D5Ar0jP-9z0KmDEH8GktpPZ068aO/view?usp=sharing" download="Medium_109590029_鄭傳脩">Medium_109590029_鄭傳脩</a><br>     
+    <img src="./medium/medium.png" width="1200px" height="600px"/>      
+  </div>
+</div>
+
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    Strong baseline
+  </div>
+</div>
+
+<div class="row hw12">
+  <div class="col-md-12 twenty">    
+    <a href="https://drive.google.com/file/d/1hrFS6TxcWbc94noq53IhK0pKas7vWQoq/view?usp=sharing" download="strong_109590029_鄭傳脩">strong_109590029_鄭傳脩</a><br>     
+    <img src="./strong/strong.png" width="1200px" height="600px"/>      
+  </div>
+</div>
   <!-- ------------------------------------------------>
 
   <!-- ------------------------------------------------>
@@ -266,6 +309,15 @@
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
     }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
 
     d3.select("#myTotal").html(score);    
   }
