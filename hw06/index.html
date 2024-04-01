@@ -189,7 +189,6 @@
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <table>
@@ -201,34 +200,55 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td>Simple baseline - 產生訓練樣本 (4808字/2) (放入image_train，壓縮檔上傳)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td id='m2'>2</td>
+          <td>Simple baseline - 產生驗證樣本 (4808字/2) (放入image_val，壓縮檔上傳)</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>4</td>
+          <td>Medium baseline - 繳交字體的對比檔案 </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td id='m4'>2</td>
+          <td>Strong baseline - 最後生成結果 (於infer_1資料夾內)</td>
         </tr>
       </table>
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
+
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      Medium baseline
+    </div>
+  </div>
+  
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <a href="https://drive.google.com/file/d/1dtk3D5Ar0jP-9z0KmDEH8GktpPZ068aO/view?usp=sharing" download="Medium_109590029_鄭傳脩">Medium_109590029_鄭傳脩</a><br>     
+      <img src="./medium/medium.png" width="1200px" height="600px"/>      
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      Strong baseline
+    </div>
+  </div>
+  
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <a href="https://drive.google.com/file/d/1dtk3D5Ar0jP-9z0KmDEH8GktpPZ068aO/view?usp=sharing" download="Medium_109590029_鄭傳脩">Medium_109590029_鄭傳脩</a><br>     
+      <img src="./medium/medium.png" width="1200px" height="600px"/>      
+    </div>
+  </div>
 
   <!-- ------------------------------------------------>
 
@@ -267,6 +287,9 @@
       score += parseInt(d3.select('#m3').html());   
     }
 
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
     d3.select("#myTotal").html(score);    
   }
 </script>
